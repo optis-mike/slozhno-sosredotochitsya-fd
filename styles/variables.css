@@ -16,5 +16,5 @@
   --page-padding: 10px;
   --text-color: #f1b2ce;
   --decorated-zone-color: var(--accent-color);
-  --rec-indicator-color: var(--accent-color)
+  --rec-indicator-color: var(--accent-color);
 }
