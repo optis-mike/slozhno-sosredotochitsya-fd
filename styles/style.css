@@ -10,21 +10,17 @@
 
 .header {
   position: relative;
-  padding: var(--page-padding);
+  padding: var(--page-padding) var(--page-padding) var(--page-padding) 10px;
   height: 100vh;
   min-height: 668px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr min-content 1fr;
 }
 
 .header__theme-menu-list {
   display: grid;
   gap: 10px;
-}
-
-.header__theme-menu-button_active {
-  border: 1px solid var(--theme-menu-color);
 }
 
 .header__theme-menu-button {
@@ -54,12 +50,17 @@
   border: 1px solid var(--theme-menu-color);
 }
 
+.header__theme-menu-button_active {
+  border: 1px solid var(--theme-menu-color);
+  pointer-events: none;
+}
+
 .rec-indicator {
   position: absolute;
   top: var(--page-padding);
   right: calc(var(--page-padding) + 28px);
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--rec-indicator-color);
   font-size: 18px;
   line-height: 25px;
   text-align: center;
@@ -72,8 +73,8 @@
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background-color: var(--accent-color);
-  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  background-color: var(--rec-indicator-color);
+  box-shadow: 0px 0px 4px 2px var(--rec-indicator-color);
   right: -19px;
   top: 8px;
 }
@@ -145,9 +146,14 @@
   font-size: inherit;
 }
 
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
 .card__title {
   font-size: inherit;
-  margin-bottom: 10px;
 }
 
 .card-link {
@@ -224,6 +230,10 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
+  .footer__logo {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
   .header {
     grid-template-columns: 1fr 1fr;
   }
@@ -254,7 +264,11 @@
 
   .section_type_practices {
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .section_type_practices .section__title {
+    grid-row: 1 / 4;
   }
 
   .visuals-grid {
@@ -295,6 +309,20 @@
 }
 
 @media (width >= 1024px) {
+  .header__theme-menu-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .section_type_struggle,
+  .section_type_practices {
+    grid-template-columns: 1fr 2.06fr;
+  }
+
   .section_type_distractors {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;

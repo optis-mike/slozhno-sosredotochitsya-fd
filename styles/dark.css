@@ -5,6 +5,7 @@
 */
 
 :root.theme-dark {
+  --page-bg-image: url("../images/cover-image-dark.png");
   --accent-color: #ff0070;
   --header-logo-color: #db00ff;
   --title-color: #000028;

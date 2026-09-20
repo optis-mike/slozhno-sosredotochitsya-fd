@@ -3,7 +3,7 @@
   и их переопределение под различные устройства
 */
 :root {
-  --page-bg-image: url("/images/cover-image-dark.png");
+  --page-bg-image: url("../images/cover-image-dark.png");
   --font-primary: "IBM Plex mono", sans-serif;
   --accent-color: #ff0070;
   --header-logo-color: #db00ff;
@@ -16,4 +16,5 @@
   --page-padding: 10px;
   --text-color: #f1b2ce;
   --decorated-zone-color: var(--accent-color);
+  --rec-indicator-color: var(--accent-color)
 }
