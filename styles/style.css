@@ -129,7 +129,6 @@
   font-size: inherit;
 }
 .content {
-  background-color: var(--bg-color-section);
   padding: calc(var(--gap-page) - var(--page-padding)) var(--page-padding);
   display: grid;
   gap: var(--gap-page);
@@ -203,7 +202,6 @@
 
 .footer {
   display: grid;
-  background-color: var(--bg-color-section);
   padding: var(--page-padding);
   position: relative;
   height: 100vh;
