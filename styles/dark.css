@@ -5,13 +5,13 @@
 */
 
 :root.theme-dark {
-  --page-bg-image: url("../images/cover-image-dark.png");
+  --page-bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
   --header-logo-color: #db00ff;
   --title-color: #000028;
   --theme-menu-color: var(--accent-color);
   --section-title-color: var(--accent-color);
-  --bg-color-section: rgb(0, 5, 52);
+  --bg-color-section: rgb(0 5 52);
   --text-color: #f1b2ce;
   --decorated-zone-color: var(--accent-color);
   /* сохраните этот селектор в приведённом виде.
